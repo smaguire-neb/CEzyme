@@ -1,0 +1,20 @@
+Package: CEzym
+Type: Package
+Title: Capillary Electrophoresis Analaysis for Enzymology
+Version: 0.1.0
+Author: Sean Maguire
+Maintainer: Sean Maguire <smaguire@neb.com>
+Description: This package 
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Depends:
+	ggplot2,
+	Fragman,
+	dplyr,
+	purrr,
+	pracma,
+	broom,
+	tidyr,
+	DescTools
+RoxygenNote: 6.1.0.9000
