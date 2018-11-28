@@ -179,5 +179,5 @@ read.abif2<-function (filename, max.bytes.in.file = file.info(filename)$size,
   res<-res$Data[c("DATA.1","DATA.2","DATA.3","DATA.4","DATA.105")]
   matrix(unlist(res),ncol=5)
 }
-
+#test test test
 
