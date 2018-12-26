@@ -12,7 +12,7 @@
 #' @references
 #' Covarrubias-Pazaran G, Diaz-Garcia L, Schlautman B, Salazar W, Zalapa J. Fragman: An R package for fragment analysis. 2016. BMC Genetics 17(62):1-8.
 read.data<-function(data.dir = getwd()){
-  files<-list.files(data.dir,pattern=".fsa")
+  files<-list.files(data.dir,pattern="\\.fsa$",full.names=T)
   data.list<-map(files,read.abif2)
   names(data.list)<-files
   data.list %>%
@@ -179,5 +179,4 @@ read.abif2<-function (filename, max.bytes.in.file = file.info(filename)$size,
   res<-res$Data[c("DATA.1","DATA.2","DATA.3","DATA.4","DATA.105")]
   matrix(unlist(res),ncol=5)
 }
-#test test test
 

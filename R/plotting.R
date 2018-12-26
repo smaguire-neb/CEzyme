@@ -81,7 +81,8 @@ plot.specific<-function(data,peaks,channel=c("ch1","ch2","ch3","ch4"),xlims=c(0,
   plot.names<-as.list(names(basicplots))
   fullplots<-map2(basicplots,plot.names, function(x,y) x+ggtitle(y))
   fullplots[[selected]]+
-    xlab("Size (bp)") + ylab("RFU") %>%
+    xlab("Size (bp)") + ylab("RFU") +
+    theme(panel.background = element_rect(fill="gray95")) %>%
     return()
 }
 
